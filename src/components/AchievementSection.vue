@@ -1,9 +1,17 @@
 <template>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- <link rel="icon" href="@/assets/image/logo.png"> -->
+    <title>*****</title>
+  </head>
+  <body>
   <div class="container">
-    <div class="row">
+    <div class="container-flud">
       <div class="col-sm-12 col-md-12 col-xl-12 nav">
 
-          <div class="md:hidden">
+        <div class="md:hidden">
           <!-- Bouton toggle -->
           <button id="burger-button" class="text-white focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8">
@@ -100,7 +108,7 @@
         </div>
         <router-link :to="'/othersection'" class="nav_link text-white font-extrabold" style="text-decoration: none">
           <button type="button" class="btn rounded-pill text-white animate__animated animate__slideInUp ml-5" style="margin-top: 100px; font-size: 15px; background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
-            <p class="font-bold">Other Achievement</p><i class="fas fa-arrow-right text-white"></i>
+            <p class="font-bold m-0">Other Achievement</p><i class="fas fa-arrow-right text-white"></i>
           </button>
         </router-link>
         <div class="col-sm-5 col-md-5 col-xl-5 " style="margin-left: auto; margin-right: auto; margin-top: 100px;">
@@ -121,7 +129,7 @@
       <div class="col-sm-5 col-md-5 col-xl-5  mt-5 p-2" style="margin-left: auto; margin-right: auto;">
         <div class="d-flex align-items-center">
           <button type="button" class="btn rounded-pill text-white" style="background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
-            <p class="font-extrabold">Follow me</p>
+            <p class="font-extrabold m-0">Follow me</p>
           </button>
           <a href="https://www.linkedin.com/in/jorel-kue-5a7961262/" target="_blank" rel="noopener noreferrer" class="" style="margin-left: 100px;">
             <font-awesome-icon :icon="['fab', 'linkedin']" class="text-white text-3xl" />
@@ -138,8 +146,8 @@
           
         </div>
       </div>
-      <div class="col-sm-12 col-md-12 col-xl-12" style="margin-top: 100px;">
-        <div class="row">
+      <div class="col-sm-12 col-md-12 col-xl-12" style="margin-top: 100px; overflow: hidden;">
+        <div class="d-flex">
           <div class="spinner-border m-5 text-white" role="status">
             <span class="sr-only">Loading...</span>
           </div>
@@ -187,6 +195,7 @@
     </div>
   </footer>
   </div>
+</body>
 </template>
 
 <script>
@@ -219,11 +228,17 @@ export default {
 <style scoped>
 
   .nav {
-  background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  filter: brightness(1); 
-  margin-top: -60px;
-  height: 100%; 
+    background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    filter: brightness(1); 
+    margin-top: -60px;
+    height: 100%; 
+  }
+  body{
+    background-color: #000; /* Noir vif */
+    background-image: linear-gradient(rgba(255, 200, 200, 0.67), transparent);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.979);
+    filter: brightness(1);
   }
   .dashbord {
     background-color: #000; /* Noir vif */
