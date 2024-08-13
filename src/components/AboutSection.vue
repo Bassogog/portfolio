@@ -49,8 +49,20 @@
             </router-link>
           </div>
         </main>
-        
-        <div class="col-sm-5 col-md-5 col-xl-5  mt-5 p-2" style="margin-left: auto; margin-right: auto;">
+        <div class="col-sm-10 col-md-10 col-xl-10 mt-5" style="margin-left: auto; margin-right: auto;">
+          <div class="diaporama">
+            <div class="diaporama-images">
+              <img src="@/assets/image/vuejs_original.png" alt="vuejs_original">
+              <img src="@/assets/image/codeigniter-1.svg" alt="codeigniter">
+              <img src="@/assets/image/Mysql_logo.png" alt="Mysql_logo 3">
+              <img src="@/assets/image/ajax.png" alt="Mysql_logo 3">
+              <img src="@/assets/image/php.png" alt="Mysql_logo 3">
+              <img src="@/assets/image/js.png" alt="Mysql_logo 3">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-5 col-md-5 col-xl-5 p-2" style="margin-left: auto; margin-right: auto;">
           <p class="text-3xl text-white font-bold font-sans blinking-text">3 </p><p class="blinking-text text-2xl text-white font-bold font-sans">years of experience</p>
           <div class="d-flex align-items-center">
             <button type="button" class="btn rounded-pill text-white" style="background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
@@ -254,7 +266,35 @@ export default {
     }
   }
 
-    .blinking-text {
-      animation: blink 1s infinite;
+  .blinking-text {
+    animation: blink 1s infinite;
+  }
+
+  .diaporama {
+    position: relative;
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    height: 300px; /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+  }
+
+  .diaporama-images {
+    display: flex;
+    gap: 60px; /* Espace entre les images */
+    animation: defilement 20s linear infinite; /* Ajustez la durée selon vos besoins */
+  }
+
+  .diaporama-images img {
+    height: 100px; /* Hauteur uniforme pour toutes les images */
+    object-fit: contain; /* Redimensionne l'image pour qu'elle soit contenue dans le conteneur tout en gardant ses proportions */
+  }
+
+  @keyframes defilement {
+    0% {
+      transform: translateX(0);
     }
+    100% {
+      transform: translateX(calc(-100% - 100px)); /* Ajoutez la valeur de l'espacement au défilement */
+    }
+  }
+
 </style>
