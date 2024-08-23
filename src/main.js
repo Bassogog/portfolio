@@ -4,15 +4,13 @@ import router from './router'
 
 import 'tailwindcss/tailwind.css'
 
-// Import FontAwesome
-import '@fortawesome/fontawesome-free/css/all.css';
-import '@fortawesome/fontawesome-free/js/all.js';
+
 /*
     BOOTSTRAP CSS, JS
 */
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
-// import "../node_modules/bootstrap/dist/js/jquery.min.js";
+
 
 // Importer les composants Vue pour FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core'
