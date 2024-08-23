@@ -31,7 +31,7 @@
       </div>
       <div class="col-sm-12 col-md-12 col-xl-12 dashbord">
         <main class="flex-grow p-4 z-10 flex flex-col-reverse md:flex-row items-center">
-          <img src="@/assets/image/logo.png" alt="Profile Image" class="shadow1-custom w-[250px] h-[250px] border-white-500">
+          <img src="@/assets/image/logo.png" alt="Profile Image" class="shadow1-custom rounded-full w-[100px] h-[100px] border-white-500">
           <div class="animate-slide-in-from-left text-center md:text-left md:mx-[-20px]">
             <p class="text-3xl text-white font-bold font-sans dance">Stalonne Kevin Bounze Kue</p>
             <p class="text-3xl text-white font-bold font-serif dance">Full stack developer</p>
