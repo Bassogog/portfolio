@@ -1,266 +1,785 @@
 <template>
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!-- <link rel="icon" href="@/assets/image/logo.png"> -->
-    <title>*****</title>
-  </head>
-    <body>
-        <div class="container">
-            <div class="container-flud">
-                <div class="col-sm-12 col-md-12 col-xl-12 nav">
-                        <div class="md:hidden">
-                        <!-- Bouton toggle -->
-                        <button id="burger-button" class="text-white focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="20" y2="18"></line>
-                        </svg>
-                        </button>
-                    </div>
-                    <div id="menu" class="hidden md:flex space-x-7 p-2" style="margin-left: auto; margin-right: auto;">
-                        <router-link :to="'/'" class="nav_link text-white font-extrabold" style="text-decoration: none"><button class="rounded-circle m-1" style="background-color: saddlebrown;"> Welcome </button></router-link>
-                        <router-link :to="'/aboutsection'" class="nav_link text-white font-extrabold" style="text-decoration: none"><button class="rounded-circle m-1" style="background-color: saddlebrown;"> About </button></router-link>
-                        <router-link :to="'/contactsection'" class="nav_link text-white font-extrabold" style="text-decoration: none"><button class="rounded-circle m-1" style="background-color: saddlebrown;"> Contact </button></router-link>
-                    </div>
-                </div>
-            </div>
+  <section class="services-page">
 
-            <!-- software development -->
-            <div class="col-sm-12 col-md-12 col-xl-12 dashbord"><br/><br/>
-                <div class="col-sm-5 col-md-5 col-xl-5" style="margin-left: auto; margin-right: auto;">
-                    <p class="text-3xl text-white font-bold font-sans" style="box-shadow: 0 4px 8px rgba(255, 255, 255, 0.979);">
-                        latest achievements
-                    </p>
-                </div>
-                
-                <div class="row">
-                    <div class="col-sm-3 col-md-3 col-xl-3 mt-5">
-                        <img src="@/assets/image/im6.png" alt="Profile Image" class="w-[300px] h-[500px] object-cover  border-white-500 ">
-                    </div>
-                    <div class="col-sm-9 col-md-9 col-xl-9 mt-5">
-                        <p class="text-3xl text-white font-bold font-sans dance animate-slide-in-from-right">gas station management application. <br/>manage the entry-exit and consumption of<br/> the station’s customers</p>
-                        <img src="@/assets/image/stationservice.png" alt="stationservice Image" class="shadow1-custom w-[1200px] h-[300px] object-cover  border-white-500 ">
+    <!-- NAVBAR -->
+    <header class="navbar">
 
-                    </div>
-                </div>
-                    
-                <div class="row">
-                    <div class="col-sm-9 col-md-9 col-xl-9 mt-5">
-                        <p class="text-3xl text-white font-bold font-sans dance animate-slide-in-from-right">inventory management application</p>
-                        <img src="@/assets/image/stock.png" alt="stationservice Image" class="shadow1-custom w-[1200px] h-[300px] object-cover  border-white-500 ">
-                    </div>
-                    <div class="col-sm-3 col-md-3 col-xl-3 mt-5">
-                        <img src="@/assets/image/im7.png" alt="stationservice Image" class="shadow1-custom w-[1200px] h-[600px] object-cover  border-white-500 ">
-                    </div>
-                </div>
-                <div class="col-sm-5 col-md-5 col-xl-5" style="margin-left: auto; margin-right: auto;">
-                    <p class="text-3xl text-white font-bold font-sans" style="box-shadow: 0 4px 8px rgba(255, 255, 255, 0.979);">
-                    Job
-                    </p>
-                </div>
-                <div class="row mt-5" style="margin-left: auto; margin-right: auto; margin-top: -100px;">
-                    <div class="col-sm-4 col-md-4 col-xl-4">
-                        <button type="button" class="btn rounded-pill text-white" style="background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
-                            <p class="font-extrabold m-0">PHP developer at LA'AHTECH</p>
-                        </button>
-                    </div>
-                    <div class="col-sm-4 col-md-4 col-xl-4">
-                        <button type="button" class="font-bold btn rounded-pill text-white" style="background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
-                            <p class="font-extrabold m-0">Front-end developer front-end developer on HONORA PROJECT</p>
-                        </button>
-                    </div>
-                    <div class="col-sm-4 col-md-4 col-xl-4">
-                        <button type="button" class="btn rounded-pill text-white" style="background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
-                            <p class="font-extrabold m-0">full stack developer at SIGERIS SARL</p>
-                        </button>
-                    </div>
-                </div>
+      <router-link to="/" class="brand">
+        <span class="brand-dot"></span>
+        JOREL<span>DEV</span>
+      </router-link>
 
-                <div class="col-sm-5 col-md-5 col-xl-5  mt-5 p-2" style="margin-left: auto; margin-right: auto;">
-                    <p class="text-3xl text-white font-bold font-sans blinking-text">3 </p><p class="blinking-text text-2xl text-white font-bold font-sans">years of experience</p>
-                    <div class="d-flex align-items-center">
-                    <button type="button" class="btn rounded-pill text-white" style="background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
-                        <p class="font-extrabold m-0">Follow me</p>
-                    </button>
-                    <a href="https://www.linkedin.com/in/jorel-kue-5a7961262/" target="_blank" rel="noopener noreferrer" class="" style="margin-left: 100px;">
-                        <font-awesome-icon :icon="['fab', 'linkedin']" class="text-white text-3xl" />
-                    </a>
-                    <a href="https://x.com/JorelKue" target="_blank" rel="noopener noreferrer" class="ml-5">
-                        <font-awesome-icon :icon="['fab', 'twitter']" class="text-white text-3xl" />
-                    </a>
-                    <a href="https://www.facebook.com/jorel.kue.3" target="_blank" rel="noopener noreferrer" class="ml-5">
-                        <font-awesome-icon :icon="['fab', 'facebook']" class="text-white text-3xl" />
-                    </a>
-                    <a href="https://wa.me/+237655402659" target="_blank" rel="noopener noreferrer" class="ml-5">
-                        <font-awesome-icon :icon="['fab', 'whatsapp']" class="text-white text-3xl" />
-                    </a>
-                    
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-xl-12" style="margin-top: 100px; overflow: hidden;">
-                    <div class="d-flex">
-                        <div class="spinner-border m-5 text-white" role="status">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                    </div>
-                </div>
+      <nav class="desktop-nav">
 
-            </div>
-            <footer class="bg-gray-800 text-white py-6">
-                <div class="container mx-auto flex justify-between items-center">
-                <div>
-                    <p>&copy; {{currentYear}} Your business. All rights reserved.</p>
-                </div>
-                <div class="flex space-x-4" >
-                    <a href="#" class="hover:text-gray-400 text-white" style="text-decoration: none;">Legal Notice</a>
-                    <a href="#" class="hover:text-gray-400 text-white" style="text-decoration: none;">Privacy Policy</a>
-                    <a href="#" class="hover:text-gray-400 text-white" style="text-decoration: none;">+237 6 55 40 26 59</a>
-                </div>
-                </div>
-            </footer>
+        <router-link to="/">
+          Accueil
+        </router-link>
+
+        <router-link to="/aboutsection">
+          À propos
+        </router-link>
+
+        <router-link to="/achievementsection">
+          Réalisations
+        </router-link>
+
+        <router-link
+          to="/othersection"
+          class="active"
+        >
+          Services
+        </router-link>
+
+        <router-link
+          to="/contactsection"
+          class="nav-contact"
+        >
+          Contact
+        </router-link>
+
+      </nav>
+
+    </header>
+
+    <!-- INTRO -->
+
+    <section class="services-intro">
+
+      <span class="number">04</span>
+
+      <div>
+
+        <p class="eyebrow">
+          EXPERTISE
+        </p>
+
+        <h1>
+          Ce que je peux
+          <span>construire.</span>
+        </h1>
+
+        <p>
+          Je conçois et développe des applications web modernes,
+          performantes et adaptées aux besoins réels des entreprises.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- SERVICES -->
+
+    <section class="services-grid">
+
+      <article class="service-card">
+
+        <div class="service-top">
+          <span>01</span>
+          <div class="service-icon">⌘</div>
         </div>
-    </body>
+
+        <h2>Développement Full Stack</h2>
+
+        <p>
+          Développement complet d'applications web, depuis l'interface
+          utilisateur jusqu'à l'API et la base de données.
+        </p>
+
+        <div class="service-tags">
+          <span>Vue.js</span>
+          <span>Spring Boot</span>
+          <span>PHP</span>
+        </div>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-top">
+          <span>02</span>
+          <div class="service-icon">{ }</div>
+        </div>
+
+        <h2>API & Backend</h2>
+
+        <p>
+          Conception d'API REST, logique métier, authentification,
+          gestion des données et intégration avec les applications frontend.
+        </p>
+
+        <div class="service-tags">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>CodeIgniter</span>
+        </div>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-top">
+          <span>03</span>
+          <div class="service-icon">◈</div>
+        </div>
+
+        <h2>Applications Web</h2>
+
+        <p>
+          Création d'interfaces modernes, responsive et intuitives
+          pensées pour offrir une expérience utilisateur professionnelle.
+        </p>
+
+        <div class="service-tags">
+          <span>Vue 3</span>
+          <span>Vite</span>
+          <span>Bootstrap</span>
+        </div>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-top">
+          <span>04</span>
+          <div class="service-icon">▣</div>
+        </div>
+
+        <h2>Gestion de données</h2>
+
+        <p>
+          Conception et gestion de bases de données adaptées aux
+          besoins des applications et aux contraintes métier.
+        </p>
+
+        <div class="service-tags">
+          <span>PostgreSQL</span>
+          <span>MySQL</span>
+          <span>SQL</span>
+        </div>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <div class="service-top">
+          <span>05</span>
+          <div class="service-icon">↗</div>
+        </div>
+
+        <h2>Solutions métier</h2>
+
+        <p>
+          Transformation d'un besoin métier en solution digitale :
+          gestion de stock, agriculture, suivi, administration et reporting.
+        </p>
+
+        <div class="service-tags">
+          <span>Business</span>
+          <span>Automation</span>
+          <span>Dashboard</span>
+        </div>
+
+      </article>
+
+
+      <article class="service-card highlight">
+
+        <div class="service-top">
+          <span>06</span>
+          <div class="service-icon">+</div>
+        </div>
+
+        <h2>Un projet spécifique ?</h2>
+
+        <p>
+          Vous avez un besoin particulier ? Parlons de votre idée
+          et définissons ensemble la meilleure approche technique.
+        </p>
+
+        <router-link
+          to="/contactsection"
+          class="service-button"
+        >
+          Démarrer une discussion →
+        </router-link>
+
+      </article>
+
+    </section>
+
+
+    <!-- TECHNOLOGIES -->
+
+    <section class="technology-section">
+
+      <div class="technology-title">
+
+        <p class="eyebrow">
+          TECHNOLOGIES
+        </p>
+
+        <h2>
+          Mon environnement
+          <span>technique.</span>
+        </h2>
+
+      </div>
+
+      <div class="technology-list">
+
+        <span>Vue.js</span>
+        <span>JavaScript</span>
+        <span>Spring Boot</span>
+        <span>Java</span>
+        <span>PHP</span>
+        <span>CodeIgniter</span>
+        <span>PostgreSQL</span>
+        <span>MySQL</span>
+        <span>REST API</span>
+        <span>Git</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+      <p>
+        © {{ currentYear }} JorelDev. Tous droits réservés.
+      </p>
+
+      <p>
+        Full Stack Developer
+      </p>
+
+    </footer>
+
+  </section>
 </template>
+
+
 <script>
-// import { defineComponent } from '@vue/composition-api'
 
-export default ({
-   data() {
+export default {
+
+  name: "OtherSection",
+
+  data() {
+
     return {
-      currentYear: null,
-      navOpen: false,
+      currentYear: new Date().getFullYear()
+    };
 
-
-    }
-
-   },
-   mounted() {
-    document.getElementById('burger-button').addEventListener('click', function() {
-      var menu = document.getElementById('menu');
-      if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-      } else {
-        menu.classList.add('hidden');
-      }
-    });
-    const currentYear = new Date().getFullYear();
-    this.currentYear = currentYear;
   }
-  
-})
+
+};
+
 </script>
+
+
 <style scoped>
-    .nav {
-        background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        filter: brightness(1); 
-        margin-top: -60px;
-        height: 100%; 
-    }
-    body{
-        background-color: #000; /* Noir vif */
-        background-image: linear-gradient(rgba(255, 200, 200, 0.67), transparent);
-        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.979);
-        filter: brightness(1);
-    }
-    .dashbord {
-        background-color: #000; /* Noir vif */
-        background-image: linear-gradient(rgba(255, 200, 200, 0.67), transparent);
-        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.979);
-        filter: brightness(1);
-    }
-    .shadow1-custom {
-        box-shadow: 0 4px 8px rgba(255, 254, 254, 0.984);
-        filter: brightness(0.5); 
-    }
-    @keyframes blink {
-        0% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
 
-    .blinking-text {
-        animation: blink 1s infinite;
-    }
-    .animate-slide-in-from-left {
-        animation: slide-in-from-left 3s ease-in-out;
-    }
-    @keyframes slide-in-from-left {
-        0% {
-            transform: translateX(-100%);
-            opacity: 0;
-        }
-        100% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    .animate-slide-in-from-right {
-        animation: slide-in-from-right 3s ease-in-out;
-    }
-    @keyframes slide-in-from-right {
-        0% {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-        100% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        
-    }
-    .animate__animated {
-        animation-duration: 3s;
-        animation-fill-mode: both;
-        
-    }
-  .animate__slideInUp{
-    animation-name: slideInUp;
-  }
-  @keyframes slideInUp {
-    from {
-      transform: translate3d(0, 100%, 0);
-      visibility: visible;
-    }
+.services-page {
 
-    to {
-      transform: translate3d(0, 0, 0);
-    }
+  min-height: 100vh;
+
+  background: #0B1120;
+
+  color: #F8FAFC;
+
+  padding: 0 7%;
+
+}
+
+
+/* NAVBAR */
+
+.navbar {
+
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid rgba(148,163,184,.12);
+
+}
+
+
+.brand {
+
+  color: #F8FAFC;
+
+  text-decoration: none;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+}
+
+
+.brand span:last-child {
+
+  color: #38BDF8;
+
+}
+
+
+.brand-dot {
+
+  display: inline-block;
+
+  width: 8px;
+
+  height: 8px;
+
+  background: #22C55E;
+
+  border-radius: 50%;
+
+  margin-right: 8px;
+
+}
+
+
+.desktop-nav {
+
+  display: flex;
+
+  gap: 30px;
+
+}
+
+
+.desktop-nav a {
+
+  color: #94A3B8;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+}
+
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+
+  color: #F8FAFC;
+
+}
+
+
+.nav-contact {
+
+  border:
+    1px solid rgba(56,189,248,.5);
+
+  padding: 10px 18px;
+
+  border-radius: 30px;
+
+}
+
+
+/* INTRO */
+
+.services-intro {
+
+  display: grid;
+
+  grid-template-columns: 100px 1fr;
+
+  gap: 30px;
+
+  padding: 100px 0 70px;
+
+  max-width: 900px;
+
+}
+
+
+.number {
+
+  color: #38BDF8;
+
+  font-weight: 700;
+
+}
+
+
+.eyebrow {
+
+  color: #22C55E;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  font-weight: 700;
+
+}
+
+
+.services-intro h1 {
+
+  font-size:
+    clamp(45px, 7vw, 75px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  margin: 15px 0 25px;
+
+}
+
+
+.services-intro h1 span {
+
+  color: #38BDF8;
+
+}
+
+
+.services-intro p:last-child {
+
+  max-width: 650px;
+
+  color: #94A3B8;
+
+  line-height: 1.8;
+
+}
+
+
+/* SERVICES */
+
+.services-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+
+}
+
+
+.service-card {
+
+  min-height: 330px;
+
+  padding: 30px;
+
+  background: #111827;
+
+  border:
+    1px solid rgba(148,163,184,.12);
+
+  border-radius: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  transition: .35s;
+
+}
+
+
+.service-card:hover {
+
+  transform:
+    translateY(-7px);
+
+  border-color:
+    rgba(56,189,248,.35);
+
+}
+
+
+.service-card.highlight {
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(34,197,94,.12),
+      transparent 35%
+    ),
+    #111827;
+
+}
+
+
+.service-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+}
+
+
+.service-top > span {
+
+  color: #38BDF8;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+}
+
+
+.service-icon {
+
+  width: 45px;
+
+  height: 45px;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    rgba(56,189,248,.08);
+
+  color: #38BDF8;
+
+  font-weight: 700;
+
+}
+
+
+.service-card h2 {
+
+  font-size: 23px;
+
+  margin:
+    40px 0 15px;
+
+}
+
+
+.service-card p {
+
+  color: #94A3B8;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+}
+
+
+.service-tags {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: auto;
+
+  padding-top: 25px;
+
+}
+
+
+.service-tags span {
+
+  padding:
+    6px 10px;
+
+  border-radius: 20px;
+
+  background: #0B1120;
+
+  color: #CBD5E1;
+
+  font-size: 10px;
+
+}
+
+
+.service-button {
+
+  display: inline-block;
+
+  margin-top: auto;
+
+  padding-top: 20px;
+
+  color: #38BDF8;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+}
+
+
+/* TECHNOLOGIES */
+
+.technology-section {
+
+  margin: 120px 0 80px;
+
+  padding: 50px;
+
+  background: #111827;
+
+  border:
+    1px solid rgba(148,163,184,.12);
+
+  border-radius: 25px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1.5fr;
+
+  gap: 60px;
+
+}
+
+
+.technology-title h2 {
+
+  font-size: 38px;
+
+  line-height: 1.2;
+
+}
+
+
+.technology-title h2 span {
+
+  color: #38BDF8;
+
+}
+
+
+.technology-list {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  align-content: center;
+
+}
+
+
+.technology-list span {
+
+  padding:
+    12px 17px;
+
+  border:
+    1px solid rgba(148,163,184,.15);
+
+  border-radius: 30px;
+
+  color: #CBD5E1;
+
+  font-size: 13px;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+  padding: 30px 0;
+
+  border-top:
+    1px solid rgba(148,163,184,.12);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #64748B;
+
+  font-size: 13px;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 950px) {
+
+  .desktop-nav {
+
+    display: none;
+
   }
+
+
+  .services-intro {
+
+    grid-template-columns: 1fr;
+
+    padding-top: 70px;
+
+  }
+
+
+  .services-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .technology-section {
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 30px;
+
+  }
+
+
+  footer {
+
+    flex-direction: column;
+
+    gap: 10px;
+
+  }
+
+}
+
 </style>

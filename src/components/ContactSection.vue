@@ -1,280 +1,542 @@
 <template>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <!-- <link rel="icon" href="@/assets/image/logo.png"> -->
-        <title>*****</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="container-flud">
-                <div class="col-sm-12 col-md-12 col-xl-12 nav">
-                    <div class="md:hidden">
-                    <!-- Bouton toggle -->
-                        <button id="burger-button" class="text-white focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8">
-                            <line x1="4" y1="6" x2="20" y2="6"></line>
-                            <line x1="4" y1="12" x2="20" y2="12"></line>
-                            <line x1="4" y1="18" x2="20" y2="18"></line>
-                        </svg>
-                        </button>
-                    </div>
-                    <div id="menu" class="hidden md:flex space-x-7 p-2" style="margin-left: auto; margin-right: auto;">
-                        <router-link :to="'/'" class="nav_link text-white font-extrabold" style="text-decoration: none"><button class="rounded-circle m-1" style="background-color: saddlebrown;"> Welcome </button></router-link>
-                        <router-link :to="'/aboutsection'" class="nav_link text-white font-extrabold" style="text-decoration: none"><button class="rounded-circle m-1" style="background-color: saddlebrown;"> About </button></router-link>
-                        <router-link :to="'/contactsection'" class="nav_link text-white font-extrabold" style="text-decoration: none"><button class="rounded-circle m-1" style="background-color: saddlebrown;"> Contact </button></router-link>
-                    </div>
-                </div>
-            </div>
+  <section class="contact-page">
 
-            <div class="col-sm-12 col-md-12 col-xl-12 dashbord"><br/><br/>
-                <div class="col-sm-5 col-md-5 col-xl-5" style="margin-left: auto; margin-right: auto;">
-                    <p class="text-3xl text-white font-bold font-sans" style="box-shadow: 0 4px 8px rgba(255, 255, 255, 0.979);">
-                        Contact
-                    </p>
-                </div><br/>
-                <div class="row">
-                    <div class="col-sm-4 col-md-4 col-xl-4 mb-5">
-                        <img src="@/assets/image/im8.png" alt="Profile Image" class="shadow1-custom w-[300px] h-[700px] object-cover  border-white-500 ">
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-xl-6 d-flex justify-content-center align-items-center" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; background: rgba(0, 0, 0, 0.7); border-radius: 10px; overflow: hidden;">
-                        <form action="/action_page.php" style="width: 500px;">
-                            <img src="@/assets/image/logo.png" alt="Logo Image" class="shadow1-custom rounded-full w-[100px] h-[100px] object-cover border-double border-8 border-white-500" style="margin-left: auto; margin-right: auto;">
+    <!-- NAVBAR -->
+    <header class="navbar">
 
-                            <div class="form-group mt-3">
-                                <label for="fname" class="text-white">First Name</label>
-                                <input type="text" id="fname" name="firstname" class="form-control" placeholder="Your name.." style="background-color: rgba(255, 255, 255, 0.2); color: #ffffff; border: none; border-radius: 5px; padding: 10px;">
-                            </div>
+      <router-link to="/" class="brand">
+        <span class="brand-dot"></span>
+        JOREL<span>DEV</span>
+      </router-link>
 
-                            <div class="form-group mb-3">
-                                <label for="lname" class="text-white">Last Name</label>
-                                <input type="text" id="lname" name="lastname" class="form-control" placeholder="Your last name.." style="background-color: rgba(255, 255, 255, 0.2); color: #ffffff; border: none; border-radius: 5px; padding: 10px;">
-                            </div>
+      <nav class="desktop-nav">
+        <router-link to="/">Accueil</router-link>
+        <router-link to="/aboutsection">À propos</router-link>
+        <router-link to="/achievementsection">
+          Réalisations
+        </router-link>
+        <router-link to="/othersection">
+          Services
+        </router-link>
+        <router-link to="/contactsection" class="active">
+          Contact
+        </router-link>
+      </nav>
 
-                            <div class="form-group mb-3">
-                                <label for="country" class="text-white">Country</label>
-                                <input type="text" id="country" name="country" class="form-control" placeholder="Your country.." style="background-color: rgba(255, 255, 255, 0.2); color: #ffffff; border: none; border-radius: 5px; padding: 10px;">
-                            </div>
+    </header>
 
-                            <div class="form-group mb-3">
-                                <label for="subject" class="text-white">Subject</label>
-                                <textarea id="subject" name="subject" class="form-control" placeholder="Write something.." style="height:200px; background-color: rgba(255, 255, 255, 0.2); color: #ffffff; border: none; border-radius: 5px; padding: 10px;"></textarea>
-                            </div>
+    <!-- INTRO -->
+    <section class="contact-intro">
 
-                            <div class="text-center">
-                                <button type="button" class="btn rounded-pill text-white mt-4" style="background-image: linear-gradient(to right, #3f03af, #660066); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); transition: all 0.3s ease;">
-                                    <p class="m-0" style="font-weight: bold;">Send</p>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-sm-5 col-md-5 col-xl-5  mt-5 p-2" style="margin-left: auto; margin-right: auto;">
-                    <p class="text-3xl text-white font-bold font-sans blinking-text">3 </p><p class="blinking-text text-2xl text-white font-bold font-sans">years of experience</p>
-                    <div class="d-flex align-items-center">
-                    <button type="button" class="btn rounded-pill text-white" style="background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
-                        <p class="font-extrabold m-0">Follow me</p>
-                    </button>
-                    <a href="https://www.linkedin.com/in/jorel-kue-5a7961262/" target="_blank" rel="noopener noreferrer" class="" style="margin-left: 100px;">
-                        <font-awesome-icon :icon="['fab', 'linkedin']" class="text-white text-3xl" />
-                    </a>
-                    <a href="https://x.com/JorelKue" target="_blank" rel="noopener noreferrer" class="ml-5">
-                        <font-awesome-icon :icon="['fab', 'twitter']" class="text-white text-3xl" />
-                    </a>
-                    <a href="https://www.facebook.com/jorel.kue.3" target="_blank" rel="noopener noreferrer" class="ml-5">
-                        <font-awesome-icon :icon="['fab', 'facebook']" class="text-white text-3xl" />
-                    </a>
-                    <a href="https://wa.me/+237655402659" target="_blank" rel="noopener noreferrer" class="ml-5">
-                        <font-awesome-icon :icon="['fab', 'whatsapp']" class="text-white text-3xl" />
-                    </a>
-                    
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-xl-12" style="margin-top: 100px; overflow: hidden;">
-                    <div class="d-flex">
-                        <div class="spinner-border m-5 text-white" role="status">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                        <div class="spinner-border m-5 text-white" role="status" style="float: left;">
-                            <span class="sr-only">Loading...</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="number">05</div>
 
-            </div>
+      <div>
+        <p class="eyebrow">CONTACT</p>
 
-            <footer class="bg-gray-800 text-white py-6">
-                <div class="container mx-auto flex justify-between items-center">
-                <div>
-                    <p>&copy; {{currentYear}} Your business. All rights reserved.</p>
-                </div>
-                <div class="flex space-x-4" >
-                    <a href="#" class="hover:text-gray-400 text-white" style="text-decoration: none;">Legal Notice</a>
-                    <a href="#" class="hover:text-gray-400 text-white" style="text-decoration: none;">Privacy Policy</a>
-                    <a href="#" class="hover:text-gray-400 text-white" style="text-decoration: none;">+237 6 55 40 26 59</a>
-                </div>
-                </div>
-            </footer>
+        <h1>
+          Parlons de votre
+          <span>projet.</span>
+        </h1>
+
+        <p>
+          Vous avez une idée, un projet web ou besoin d'une solution
+          digitale ? Échangeons ensemble pour voir comment lui donner vie.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- CONTACT CONTENT -->
+    <section class="contact-grid">
+
+      <!-- INFOS -->
+      <div class="contact-info">
+
+        <div class="info-card">
+          <span class="info-icon">@</span>
+
+          <div>
+            <small>EMAIL</small>
+            <a href="mailto:bounzestalonnekevin@gmail.com">
+              bounzestalonnekevin@gmail.com
+            </a>
+          </div>
         </div>
-    </body>
+
+        <div class="info-card">
+          <span class="info-icon">☎</span>
+
+          <div>
+            <small>TÉLÉPHONE</small>
+            <a href="tel:+237655402659">
+              +237 6 55 40 26 59
+            </a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span class="info-icon">WA</span>
+
+          <div>
+            <small>WHATSAPP</small>
+            <a
+              href="https://wa.me/237655402659"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Discuter sur WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="social-block">
+
+          <p>RETROUVEZ-MOI</p>
+
+          <div class="social-links">
+
+            <a
+              href="https://www.linkedin.com/in/jorel-kue-5a7961262/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="https://x.com/JorelKue"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              X
+            </a>
+
+            <a
+              href="https://www.facebook.com/jorel.kue.3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- FORMULAIRE -->
+      <div class="contact-form">
+
+        <form @submit.prevent="sendMessage">
+
+          <div class="form-row">
+
+            <div class="field">
+              <label>Prénom</label>
+              <input
+                v-model="form.firstName"
+                type="text"
+                placeholder="Votre prénom"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label>Nom</label>
+              <input
+                v-model="form.lastName"
+                type="text"
+                placeholder="Votre nom"
+                required
+              />
+            </div>
+
+          </div>
+
+          <div class="field">
+            <label>Email</label>
+            <input
+              v-model="form.email"
+              type="email"
+              placeholder="vous@email.com"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label>Objet</label>
+            <input
+              v-model="form.subject"
+              type="text"
+              placeholder="Objet de votre message"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label>Message</label>
+
+            <textarea
+              v-model="form.message"
+              rows="6"
+              placeholder="Parlez-moi de votre projet..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="send-button">
+            Envoyer le message
+            <span>→</span>
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© {{ currentYear }} JorelDev. Tous droits réservés.</p>
+      <p>Full Stack Developer</p>
+    </footer>
+
+  </section>
 </template>
+
 <script>
-// import { defineComponent } from '@vue/composition-api'
+export default {
+  name: "ContactSection",
 
-export default ({
-   data() {
+  data() {
     return {
-        currentYear: null,
-      navOpen: false,
-    }
+      currentYear: new Date().getFullYear(),
 
-   },
-   mounted() {
-    document.getElementById('burger-button').addEventListener('click', function() {
-      var menu = document.getElementById('menu');
-      if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-      } else {
-        menu.classList.add('hidden');
+      form: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        subject: "",
+        message: ""
       }
-    });
-    const currentYear = new Date().getFullYear();
-    this.currentYear = currentYear;
+    };
+  },
+
+  methods: {
+
+    sendMessage() {
+
+      const body = `
+Bonjour,
+
+Nom : ${this.form.firstName} ${this.form.lastName}
+Email : ${this.form.email}
+
+${this.form.message}
+      `;
+
+      const mailto =
+        `mailto:jorel.kue@gmail.com` +
+        `?subject=${encodeURIComponent(this.form.subject)}` +
+        `&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailto;
+    }
+
   }
-})
+};
 </script>
+
 <style scoped>
-    .nav {
-        background-image: linear-gradient(to right, rgba(63, 3, 3, 10), transparent);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        filter: brightness(1); 
-        margin-top: -60px;
-        height: 100%; 
-    }
-    body{
-        background-color: #000; /* Noir vif */
-        background-image: linear-gradient(rgba(255, 200, 200, 0.67), transparent);
-        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.979);
-        filter: brightness(1);
-    }
-    .dashbord {
-        background-color: #000; /* Noir vif */
-        background-image: linear-gradient(rgba(255, 200, 200, 0.67), transparent);
-        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.979);
-        filter: brightness(1);
-    }
-    .shadow1-custom {
-        box-shadow: 0 4px 8px rgba(255, 254, 254, 0.984);
-        filter: brightness(0.5); 
-    }
-    @keyframes blink {
-        0% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
 
-    .blinking-text {
-        animation: blink 1s infinite;
-    }
-    .animate-slide-in-from-left {
-        animation: slide-in-from-left 3s ease-in-out;
-    }
-    @keyframes slide-in-from-left {
-        0% {
-            transform: translateX(-100%);
-            opacity: 0;
-        }
-        100% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    .animate-slide-in-from-right {
-        animation: slide-in-from-right 3s ease-in-out;
-    }
-    @keyframes slide-in-from-right {
-        0% {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-        100% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        
-    }
-    .animate__animated {
-        animation-duration: 3s;
-        animation-fill-mode: both;
-        
-    }
-    .animate__slideInUp{
-        animation-name: slideInUp;
-    }
-    @keyframes slideInUp {
-        from {
-            transform: translate3d(0, 100%, 0);
-            visibility: visible;
-        }
+.contact-page {
+  min-height: 100vh;
+  background: #0B1120;
+  color: #F8FAFC;
+  padding: 0 7%;
+}
 
-        to {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-    * {box-sizing: border-box;}
+/* NAVBAR */
 
-    input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    }
+.navbar {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(148,163,184,.12);
+}
 
-    input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    }
+.brand {
+  color: #F8FAFC;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
 
-    input[type=submit]:hover {
-    background-color: #45a049;
-    }
+.brand span:last-child {
+  color: #38BDF8;
+}
+
+.brand-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #22C55E;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.desktop-nav a {
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+  color: #F8FAFC;
+}
+
+/* INTRO */
+
+.contact-intro {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 30px;
+  padding: 100px 0 70px;
+  max-width: 900px;
+}
+
+.number {
+  color: #38BDF8;
+  font-weight: 700;
+}
+
+.eyebrow {
+  color: #22C55E;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.contact-intro h1 {
+  font-size: clamp(45px, 7vw, 75px);
+  line-height: 1;
+  letter-spacing: -3px;
+  margin: 15px 0 25px;
+}
+
+.contact-intro h1 span {
+  color: #38BDF8;
+}
+
+.contact-intro p:last-child {
+  max-width: 650px;
+  color: #94A3B8;
+  line-height: 1.8;
+}
+
+/* GRID */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 70px;
+  padding-bottom: 100px;
+}
+
+/* INFO */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px;
+  background: #111827;
+  border: 1px solid rgba(148,163,184,.12);
+  border-radius: 16px;
+}
+
+.info-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: rgba(56,189,248,.1);
+  color: #38BDF8;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.info-card small {
+  display: block;
+  color: #64748B;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.info-card a {
+  color: #F8FAFC;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.info-card a:hover {
+  color: #38BDF8;
+}
+
+.social-block {
+  margin-top: 25px;
+}
+
+.social-block p {
+  color: #64748B;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-links a {
+  color: #CBD5E1;
+  text-decoration: none;
+  padding: 10px 16px;
+  border: 1px solid rgba(148,163,184,.15);
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+/* FORM */
+
+.contact-form {
+  background: #111827;
+  border: 1px solid rgba(148,163,184,.12);
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  margin-bottom: 22px;
+}
+
+.field label {
+  display: block;
+  color: #CBD5E1;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0B1120;
+  border: 1px solid rgba(148,163,184,.15);
+  border-radius: 10px;
+  color: #F8FAFC;
+  padding: 14px;
+  outline: none;
+  font-family: inherit;
+  transition: .3s;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #38BDF8;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.send-button {
+  width: 100%;
+  border: none;
+  background: #F8FAFC;
+  color: #0B1120;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.send-button:hover {
+  background: #38BDF8;
+}
+
+.send-button span {
+  margin-left: 10px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 30px 0;
+  border-top: 1px solid rgba(148,163,184,.12);
+  display: flex;
+  justify-content: space-between;
+  color: #64748B;
+  font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .contact-intro {
+    grid-template-columns: 1fr;
+    padding-top: 70px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 </style>
